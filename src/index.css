@@ -1,0 +1,18 @@
+.Card:hover{
+  transform: scale(1.025);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about h1{
+  font-size: 35px;
+}
+
+.about p{
+  font-size:24px;
+}
+
+.about h3{
+  font-size: 30px;
+}
+
+
