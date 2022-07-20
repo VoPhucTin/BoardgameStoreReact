@@ -18,16 +18,16 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                                <NavLink className="nav-link active" aria-current="page" to="/"><span className="fa fa-home fa-lg"></span>Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/products">Product</NavLink>
+                                <NavLink className="nav-link" to="/products"><span className="fa fa-list fa-lg"></span>Product</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/about">About</NavLink>
+                                <NavLink className="nav-link" to="/about"><span className="fa fa-info fa-lg"></span>About</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                                <NavLink className="nav-link" to="/contact"><span className="fa fa-address-card fa-lg"></span>Contact</NavLink>
                             </li>
                         </ul>
 
@@ -37,8 +37,9 @@ const Header = () => {
             </nav>
             <div class="px-3 py-2 border-bottom mb-3">
                 <div class="container d-flex flex-wrap justify-content-center">
-                    <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 
                     <Login />

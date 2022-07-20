@@ -14,19 +14,27 @@ const ProductDetail = () => {
     const dispatch = useDispatch();
 
     const handleCart = (product) => {
-        if (cart === "Add to Cart"){
+        if (cart === "Add to Cart") {
             dispatch(addItem(product));
             setCart("Remove from Cart");
         }
-        else{
+        else {
             dispatch(delItem(product));
             setCart("Add to Cart");
         }
-            
+
     }
     return (
         <div>
-            <div className='container my-5 py-3'>
+            <div className='container'>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><NavLink to="/">Home</NavLink></li>
+                        <li class="breadcrumb-item"><NavLink to="/products">Product</NavLink></li>
+                        <li class="breadcrumb-item active" aria-current="page">{product.title}</li>
+                    </ol>
+                </nav>
+                <hr/>
                 <div className='row'>
                     <div className='col-md-6 d-fex justify-content-center mx-auto product'>
                         <img src={product.image} alt={product.title} height="400px" />
@@ -40,6 +48,7 @@ const ProductDetail = () => {
                         <NavLink to='/Cart' className='btn btn-outline-success ms-2 px-3 py-2'>Go to Cart</NavLink>
                     </div>
                 </div>
+                <hr/>
             </div>
         </div>
     )

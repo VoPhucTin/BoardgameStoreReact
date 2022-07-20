@@ -7,12 +7,19 @@ const About = () => {
   return (
     <div>
       <div className='container'>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><NavLink to="/">Home</NavLink></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+          </ol>
+        </nav>
+        <hr/>
         <div className='row '>
           <div className='about col-12 col-md-6'>
             <h1>About Us</h1>
             <p>We first launched on October 22th 2022 with just a search feature. <br />
               Today we've got a fast growing community, database of board game information, and connections to all the major retailers.</p>
-            <hr/>
+            <hr />
             <h3>Founders</h3>
             <p>Tín started this project by himself creating the beta version of the website in November of 2020.<br />
               Gumball joined in as a co-founder in May 2021 and together have built the company to where it is today.</p>
